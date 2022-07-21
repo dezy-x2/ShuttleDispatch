@@ -2,5 +2,5 @@ run:
 	@clear
 	@echo "Compiling..."
 	@javac Dispatch.java
-	@echo "Running..."
+	@echo "Running...\n"
 	@java Dispatch
