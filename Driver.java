@@ -10,4 +10,16 @@ public class Driver {
         this.driverIsAvailable = true;
     }
 
+    public String getDriverName() {
+        return driverName;
+    }
+
+    public boolean getDriverIsAvailable() {
+        return driverIsAvailable;
+    }
+
+    public void setDriverIsAvailable(boolean driverIsAvailable) {
+        this.driverIsAvailable = driverIsAvailable;
+    }
+
 }
