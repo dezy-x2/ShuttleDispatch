@@ -1,6 +1,7 @@
 public class Driver {
     private String driverName;
     private boolean driverIsAvailable;
+    private int driverID;
     public static void main(String[] args) {
         System.out.println("Hello, World!");
     }
@@ -16,6 +17,10 @@ public class Driver {
 
     public boolean getDriverIsAvailable() {
         return driverIsAvailable;
+    }
+
+    public int getDriverID() {
+        return driverID;
     }
 
     public void setDriverIsAvailable(boolean driverIsAvailable) {
