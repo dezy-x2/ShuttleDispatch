@@ -2,6 +2,7 @@ public class Client {
     private String clientName;
     private int clientPartySize;
     private String clientLocation;
+    private int clientID;
     public static void main(String[] args) {
         System.out.println("Hello, World!");
     }
@@ -22,6 +23,10 @@ public class Client {
 
     public String getClientLocation() {
         return clientLocation;
+    }
+
+    public int getClientID() {
+        return clientID;
     }
 
     public void setClientLocation(String clientLocation) {
