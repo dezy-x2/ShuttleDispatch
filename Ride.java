@@ -14,4 +14,32 @@ public class Ride {
         this.currentClientID = -1;
         this.isRideAvailable = true;
     }
+
+    public int getCapacity() {
+        return capacity;
+    }
+
+    public int getDriverID() {
+        return driverID;
+    }
+
+    public int getCurrentClientID() {
+        return currentClientID;
+    }
+
+    public boolean getIsRideAvailable() {
+        return isRideAvailable;
+    }
+
+    public void setDriverID(int driverID) {
+        this.driverID = driverID;
+    }
+
+    public void setCurrentClientID(int currentClientID) {
+        this.currentClientID = currentClientID;
+    }
+
+    public void setIsRideAvailable(boolean isRideAvailable) {
+        this.isRideAvailable = isRideAvailable;
+    }
 }
