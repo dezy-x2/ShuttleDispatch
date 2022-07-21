@@ -12,4 +12,20 @@ public class Client {
         this.clientLocation = null;
     }
 
+    public String getClientName() {
+        return clientName;
+    }
+
+    public int getClientPartySize() {
+        return clientPartySize;
+    }
+
+    public String getClientLocation() {
+        return clientLocation;
+    }
+
+    public void setClientLocation(String clientLocation) {
+        this.clientLocation = clientLocation;
+    }
+
 }
