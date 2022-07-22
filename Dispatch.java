@@ -32,4 +32,20 @@ public class Dispatch {
             this.fleet.add(ride);
         }
     }
+
+    private int locationIndex(String location) {
+        if (location.equals("A")) {
+            return 0;
+        } else if (location.equals("B")) {
+            return 1;
+        } else if (location.equals("C")) {
+            return 2;
+        } else if (location.equals("D")) {
+            return 3;
+        } else if (location.equals("E")) {
+            return 4;
+        } else {
+            return -1;
+        }
+    }
 }
