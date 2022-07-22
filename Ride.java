@@ -3,6 +3,7 @@ public class Ride {
     private int driverID;
     private int currentClientID;
     private boolean isRideAvailable;
+    private String location;
 
     public static void main(String[] args) {
         System.out.println("Hello, World!");
@@ -13,6 +14,7 @@ public class Ride {
         this.driverID = -1;
         this.currentClientID = -1;
         this.isRideAvailable = true;
+        this.location = "A";
     }
 
     public int getCapacity() {
@@ -31,6 +33,10 @@ public class Ride {
         return isRideAvailable;
     }
 
+    public String getLocation() {
+        return location;
+    }
+
     public void setDriverID(int driverID) {
         this.driverID = driverID;
     }
@@ -41,5 +47,9 @@ public class Ride {
 
     public void setIsRideAvailable(boolean isRideAvailable) {
         this.isRideAvailable = isRideAvailable;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
     }
 }
