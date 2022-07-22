@@ -13,7 +13,7 @@ public class Dispatch {
     public static void main(String[] args) {
         System.out.println("Hello, World!");
 
-        Client client1 = new Client("John", 2);
+        Client client1 = new Client("John", 2, "B");
         Ride ride1 = new Ride(16);
         Driver driver1 = new Driver("John");
     }
@@ -47,5 +47,11 @@ public class Dispatch {
         } else {
             return -1;
         }
+    }
+
+    private int distance(String location1, String location2) {
+        int index1 = locationIndex(location1);
+        int index2 = locationIndex(location2);
+        return campusMap[index1][index2];
     }
 }
