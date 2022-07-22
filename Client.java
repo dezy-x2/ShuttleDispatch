@@ -7,10 +7,10 @@ public class Client {
         System.out.println("Hello, World!");
     }
 
-    public Client(String clientName, int clientPartySize) {
+    public Client(String clientName, int clientPartySize, String clientLocation) {
         this.clientName = clientName;
         this.clientPartySize = clientPartySize;
-        this.clientLocation = null;
+        this.clientLocation = clientLocation;
     }
 
     public String getClientName() {
