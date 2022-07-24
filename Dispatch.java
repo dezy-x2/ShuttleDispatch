@@ -15,7 +15,9 @@ public class Dispatch {
 
         Client client1 = new Client("John", 2, "B");
         Ride ride1 = new Ride(16);
+        Ride ride2 = new Ride(16);
         Driver driver1 = new Driver("John");
+        ride1.setDriver(driver1); //! in order to test the system have to create function like hostHelper
     }
 
     public Dispatch(Client[] clients, Driver[] drivers, Ride[] fleet) {
@@ -53,5 +55,23 @@ public class Dispatch {
         int index1 = locationIndex(location1);
         int index2 = locationIndex(location2);
         return campusMap[index1][index2];
+    }
+
+    public void transportClient(Client client, String to) {
+        //TODO: should filter through the fleet to only look at drivers that are available and then find the one with the lowest distance score
+        ArrayList<Ride> avaliable = new ArrayList<Ride>();
+        for (Ride ride : this.fleet) {
+            if (ride.getIsRideAvailable() && ride.getCapacity() >= client.getClientPartySize()) avaliable.add(ride);
+        }
+
+        Ride bestRide = avaliable.get(0);
+        for(Ride ride : avaliable) {
+            if (distance(client.getClientLocation(), ride.getLocation()) < distance(bestRide.getLocation(), client.getClientLocation())) {
+                bestRide = ride;
+            }
+        }
+        System.out.println("Transporting Client: " + client.getClientName() + " ID: " + client.getClientID() + "to " + to + "; using Diver: " + bestRide.getDriver() + " ID: " + bestRide.getDriverID());
+        client.setClientLocation(to);
+        bestRide.setLocation(to);
     }
 }
