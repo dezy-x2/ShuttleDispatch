@@ -13,7 +13,7 @@ public class Ride {
         this.capacity = capacity;
         this.driverID = -1;
         this.currentClientID = -1;
-        this.isRideAvailable = true;
+        this.isRideAvailable = false;
         this.location = "A";
     }
 
@@ -39,6 +39,7 @@ public class Ride {
 
     public void setDriverID(int driverID) {
         this.driverID = driverID;
+        this.isRideAvailable = true;
     }
 
     public void setCurrentClientID(int currentClientID) {
