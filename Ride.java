@@ -1,6 +1,6 @@
 public class Ride {
     private int capacity;
-    private int driverID;
+    private Driver driver;
     private int currentClientID;
     private boolean isRideAvailable;
     private String location;
@@ -11,34 +11,38 @@ public class Ride {
 
     public Ride(int capacity) {
         this.capacity = capacity;
-        this.driverID = -1;
+        this.driver = null;
         this.currentClientID = -1;
         this.isRideAvailable = false;
         this.location = "A";
     }
 
     public int getCapacity() {
-        return capacity;
+        return this.capacity;
     }
 
     public int getDriverID() {
-        return driverID;
+        return this.driver.getDriverID();
+    }
+
+    public Driver getDriver() {
+        return this.driver;
     }
 
     public int getCurrentClientID() {
-        return currentClientID;
+        return this.currentClientID;
     }
 
     public boolean getIsRideAvailable() {
-        return isRideAvailable;
+        return this.isRideAvailable;
     }
 
     public String getLocation() {
-        return location;
+        return this.location;
     }
 
-    public void setDriverID(int driverID) {
-        this.driverID = driverID;
+    public void setDriver(Driver driver) {
+        this.driver = driver;
         this.isRideAvailable = true;
     }
 
