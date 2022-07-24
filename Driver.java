@@ -9,6 +9,7 @@ public class Driver {
     public Driver(String driverName) {
         this.driverName = driverName;
         this.driverIsAvailable = true;
+        this.driverID = (int)Math.floor(Math.random() * 10000) + 1;
     }
 
     public String getDriverName() {

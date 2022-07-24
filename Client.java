@@ -11,6 +11,7 @@ public class Client {
         this.clientName = clientName;
         this.clientPartySize = clientPartySize;
         this.clientLocation = clientLocation;
+        this.clientID = (int)Math.floor(Math.random() * 10000) + 1;
     }
 
     public String getClientName() {
