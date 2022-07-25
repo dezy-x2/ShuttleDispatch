@@ -58,11 +58,9 @@ public class Dispatch {
     }
 
     public void transportClient(Client client, String to) {
-        //TODO: should filter through the fleet to only look at drivers that are available and then find the one with the lowest distance score
-        ArrayList<Ride> avaliable = new ArrayList<Ride>();
-        for (Ride ride : this.fleet) {
-            if (ride.getIsRideAvailable() && ride.getCapacity() >= client.getClientPartySize()) avaliable.add(ride);
-        }
+        @SuppressWarnings("unchecked")
+        ArrayList<Ride> avaliable = (ArrayList<Ride>) this.fleet.clone();
+        avaliable.removeIf(ride -> !ride.getIsRideAvailable() || ride.getCapacity() < client.getClientPartySize());
 
         Ride bestRide = avaliable.get(0);
         for(Ride ride : avaliable) {
