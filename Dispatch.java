@@ -43,11 +43,13 @@ public class Dispatch {
             char input = sc.nextLine().charAt(0);
             switch(input) {
                 case 'X':
+                    sc.close();
                     return;
                 case 'm':
-                    
+
             }
         }
+        sc.close();
     }
 
     private int locationIndex(String location) {
