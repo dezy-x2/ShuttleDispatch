@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 public class Dispatch {
     private int[][] campusMap = {
         {0, 5, 14, 9, 20},
@@ -32,6 +33,20 @@ public class Dispatch {
         }
         for (Ride ride : fleet) {
             this.fleet.add(ride);
+        }
+    }
+
+    public void dispatcher() {
+        Scanner sc = new Scanner(System.in);
+        boolean cont = true;
+        while (cont) {
+            char input = sc.nextLine().charAt(0);
+            switch(input) {
+                case 'X':
+                    return;
+                case 'm':
+                    
+            }
         }
     }
 
